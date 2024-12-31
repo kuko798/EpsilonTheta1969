@@ -59,6 +59,22 @@
             </div>
     
         </div>
+	<script>
+$(document).ready(function() {
+  // Function to handle the click event on the mobile menu
+  function handleMobileMenuClick() {
+    $('#navbarSupportedContent').toggleClass('show');
+  }
+
+  // Attach the click event handler to the mobile menu button
+  $('.navbar-toggler').click(handleMobileMenuClick);
+
+  // Close the mobile menu when a link inside the menu is clicked
+  $('.navbar-nav .nav-link').click(function() {
+    $('#navbarSupportedContent').removeClass('show');
+  });
+});
+</script>
         
        <style>
         .navigation-wrap.bg-light.start-header.start-style{
