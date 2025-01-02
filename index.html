@@ -186,6 +186,7 @@ $(document).ready(function() {
         </section>
 
         <section class="last">
+	<div class="carousel-wrapper">	
         <div class="photo_carsouel">
               <img src="IMG_5742.jpeg"/>
               <img src="IMG_5672.jpeg"/>
@@ -196,9 +197,15 @@ $(document).ready(function() {
               <img src="23_Homecoming_MCHC_Yard_Show_Stremikis_173.jpeg"/>
               <img src="ETHETA Fa _22 Wisconsin Ques-02.JPEG"/>
               <img src="IMG_2118.png"/>
-
+	</div>
+	</div>
         </section>
         <style>
+		.carousel-wrapper {
+  width: 100%; /* Match viewport width */
+  overflow: hidden; /* Hide overflow while maintaining seamless animation */
+  position: relative;
+}
 		@media (max-width: 900px) {
   .calendar-containerr iframe {
     height: 300px !important;
