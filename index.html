@@ -238,13 +238,17 @@ $(document).ready(function() {
 .photo_carsouel {
   animation: bannermove 30s linear infinite;
 }
-
+	@media (max-width: 900px) {
+ .photo_carsouel  {
+      animation: bannermove 50s linear infinite;
+  }
+}
 @keyframes bannermove {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-500%);
   }
 }
         </style>
