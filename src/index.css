@@ -80,3 +80,26 @@ main {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+/*
+ * Marquee: keyframes + animation must live in global CSS. If animation is set inside a *.module.css
+ * file, the animation-name gets hashed and no longer matches these keyframes.
+ */
+@keyframes etheta-marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track-animate {
+  animation: etheta-marquee-x 55s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track-animate {
+    animation: none;
+  }
+}

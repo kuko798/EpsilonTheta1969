@@ -153,11 +153,10 @@
   align-items: stretch;
   gap: 1rem;
   width: max-content;
-  animation: marqueeScroll 55s linear infinite;
-  will-change: transform;
+  /* animation: see global class .marquee-track-animate in index.css (CSS modules hash animation names) */
 }
 
-.marquee:hover .marqueeTrack {
+.marquee:hover :global(.marquee-track-animate) {
   animation-play-state: paused;
 }
 
@@ -169,19 +168,11 @@
 .marqueeImg {
   display: block;
   width: min(300px, 72vw);
+  max-width: none; /* override global img { max-width: 100% } so flex strip width is stable */
   height: 200px;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-@keyframes marqueeScroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -191,7 +182,6 @@
   }
 
   .marqueeTrack {
-    animation: none;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;

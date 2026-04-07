@@ -99,7 +99,7 @@ export function HomePage() {
           Chapter moments
         </h2>
         <div className={styles.marquee} role="presentation">
-          <div className={styles.marqueeTrack}>
+          <div className={`${styles.marqueeTrack} marquee-track-animate`}>
             {track.map((src, i) => (
               <figure key={`${src}-${i}`} className={styles.marqueeFigure}>
                 <img src={src} alt="" className={styles.marqueeImg} loading="lazy" decoding="async" />
