@@ -1,0 +1,133 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem 4rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0 0 0.5rem;
+  color: var(--purple-deep);
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--purple-mid) 100%);
+  border-radius: 3px;
+}
+
+.item {
+  position: relative;
+  padding-left: 4.5rem;
+  padding-bottom: 2rem;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--purple-mid);
+  z-index: 1;
+}
+
+.index {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: #f3ecf8;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(75, 0, 110, 0.08);
+}
+
+.lineTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+}
+
+.date {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.members {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.members li {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 520px) {
+  .item {
+    padding-left: 0;
+    padding-top: 3rem;
+  }
+
+  .marker {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .timeline::before {
+    left: 50%;
+    margin-left: -1.5px;
+  }
+}
