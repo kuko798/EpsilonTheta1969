@@ -94,11 +94,16 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className={styles.sectionMuted} aria-label="Chapter photo gallery">
-        <div className={styles.marquee} aria-hidden>
+      <section className={styles.sectionMuted} aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" className={styles.galleryTitle}>
+          Chapter moments
+        </h2>
+        <div className={styles.marquee} role="presentation">
           <div className={styles.marqueeTrack}>
             {track.map((src, i) => (
-              <img key={`${src}-${i}`} src={src} alt="" className={styles.marqueeImg} loading="lazy" />
+              <figure key={`${src}-${i}`} className={styles.marqueeFigure}>
+                <img src={src} alt="" className={styles.marqueeImg} loading="lazy" decoding="async" />
+              </figure>
             ))}
           </div>
         </div>

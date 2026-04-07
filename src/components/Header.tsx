@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ChapterLogo } from "./ChapterLogo";
 import styles from "./Header.module.css";
 
 const nav: { to: string; label: string; end?: boolean }[] = [
@@ -32,7 +33,7 @@ export function Header() {
     <header className={`${styles.shell} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
         <NavLink to="/" className={styles.brand} end>
-          <img src="/etheta_logo.png" alt="Epsilon Theta chapter logo" width={120} height={36} />
+          <ChapterLogo size="header" />
         </NavLink>
 
         <button

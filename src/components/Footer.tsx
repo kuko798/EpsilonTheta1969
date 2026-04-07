@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ChapterLogo } from "./ChapterLogo";
 import styles from "./Footer.module.css";
 
 const social = [
@@ -21,7 +22,7 @@ export function Footer() {
       <div className={styles.inner}>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <img src="/etheta_logo.png" alt="" width={100} height={30} />
+            <ChapterLogo size="footer" />
             <span className={styles.tagline}>Omega Psi Phi Fraternity, Inc.</span>
           </div>
           <div className={styles.social}>
