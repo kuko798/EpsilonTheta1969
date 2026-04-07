@@ -1,9 +1,7 @@
 import type { CSSProperties } from "react";
+import { EventsCalendarSection } from "@/components/EventsCalendarSection";
 import { useReveal } from "@/hooks/useReveal";
 import styles from "./HomePage.module.css";
-
-const CALENDAR_SRC =
-  "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=a29iZXVrb0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%2333B679&color=%230B8043";
 
 const HERO_BG = encodeURI("/ETHETA Fa _22 Wisconsin Ques-02.JPEG");
 
@@ -84,14 +82,8 @@ export function HomePage() {
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Events calendar</h2>
-        <p className={styles.lead}>Keep up with your favorite chapter.</p>
-        <div className={styles.calendarWrap}>
-          <iframe
-            title="Epsilon Theta Google Calendar"
-            src={CALENDAR_SRC}
-            className={styles.calendar}
-          />
-        </div>
+        <p className={styles.lead}>Chapter events and flyers — times are always shown in Central Time.</p>
+        <EventsCalendarSection />
       </section>
 
       <section className={styles.sectionMuted} aria-labelledby="gallery-heading">
